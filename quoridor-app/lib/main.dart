@@ -47,7 +47,7 @@ Future<void> main() async {
   // See the 'Crashlytics' section of the main README.md file for details.
 
   //FirebaseCrashlytics? crashlytics;
-  
+
   // if (!kIsWeb && (Platform.isIOS || Platform.isAndroid)) {
   //   try {
   //     WidgetsFlutterBinding.ensureInitialized();
@@ -140,7 +140,7 @@ class MyApp extends StatelessWidget {
             GoRoute(
                 path: 'play',
                 pageBuilder: (context, state) => buildMyTransition<void>(
-                      child: const Board(), 
+                      child: const Board(),
                       //const LevelSelectionScreen(
                       //    key: Key('level selection')),
                       color: context.watch<Palette>().backgroundLevelSelection,
@@ -247,7 +247,7 @@ class MyApp extends StatelessWidget {
           Provider(
             create: (context) => Palette(),
           ),
-        
+
           ChangeNotifierProvider(
             create: (context) => BoardState(10),
           )
@@ -273,9 +273,7 @@ class MyApp extends StatelessWidget {
             routeInformationParser: _router.routeInformationParser,
             routerDelegate: _router.routerDelegate,
             scaffoldMessengerKey: scaffoldMessengerKey,
-
             debugShowCheckedModeBanner: false,
-
           );
         }),
       ),
